@@ -62,7 +62,7 @@ The local age-tiered story generator works without an AI service. An optional Op
 | Physics | Rapier via `@react-three/rapier` |
 | UI | Bootstrap, Lucide icons, custom CSS |
 | Backend/API | Python, Django 5.2, Django REST Framework |
-| Database | SQLite by default; PostgreSQL via `DATABASE_URL` |
+| Database | Supabase via `DATABASE_URL` |
 | Authentication | Local guest mode; optional Supabase Auth/JWT |
 | Story generation | Validated offline templates; optional OpenAI-compatible API |
 | Testing | Django test runner, Vitest, React Testing Library |
@@ -77,7 +77,7 @@ Student browser
       Django REST API
            │ Django ORM
            ▼
-     SQLite or PostgreSQL
+     Supabase(Database)
 ```
 
 The frontend sends player actions and quiz answers to Django. The backend validates the current activity step, stores attempts and story progress, scores quizzes, and returns rewards. During local development, Vite proxies `/api` requests to Django.
@@ -122,7 +122,7 @@ If PowerShell prevents environment activation, either allow activation for your 
 In the second PowerShell terminal:
 
 ```powershell
-Set-Location 'D:\HCL EDUPLAY\frontend'
+Set-Location 'D:\HCL EDUPLAY'
 npm install
 npm run dev
 ```

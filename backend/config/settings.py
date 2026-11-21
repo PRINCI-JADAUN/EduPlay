@@ -23,7 +23,7 @@ load_env_file()
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "local-eduplay-development-key")
 DEBUG = os.getenv("DEBUG", "True").lower() == "true"
 LOCAL_DEMO_MODE = os.getenv("LOCAL_DEMO_MODE", "True").lower() == "true"
-ALLOWED_HOSTS = [host.strip() for host in os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",") if host.strip()]
+ALLOWED_HOSTS = [host.strip() for host in os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost,.vercel.app").split(",") if host.strip()]
 SUPABASE_URL = os.getenv("SUPABASE_URL", "").rstrip("/")
 SUPABASE_JWT_SECRET = os.getenv("SUPABASE_JWT_SECRET", "")
 STORY_AI_API_URL = os.getenv("STORY_AI_API_URL", "").strip()
